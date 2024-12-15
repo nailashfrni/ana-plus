@@ -49,7 +49,7 @@ def process_and_send_data(items):
 def fetch_and_send():
     res = requests.get(f"{ROOT}/id/floods")
 
-    if (res.status_code == 200):
+    if (res.status_code == 200):    
         process_and_send_data(res.json().get("items"))
     else:
         print("Fail to fetch API")
